@@ -31,6 +31,11 @@ namespace DistanceConverter
             return feet * 0.3048;
         }
 
+        /// <summary>
+        /// メートルからフィートを求める
+        /// </summary>
+        /// <param name="meter"></param>
+        /// <returns></returns>
         static double MeterToFeet(int meter)
         {
             return meter / 0.3048;
