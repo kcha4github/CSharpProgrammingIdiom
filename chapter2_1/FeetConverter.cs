@@ -7,7 +7,7 @@ namespace DistanceConverter
     /// <summary>
     /// フィートとメートルの単位変換クラス
     /// </summary>
-    class FeetConverter
+    public static class FeetConverter
     {
         /// <summary>
         /// メートルからフィートを求める
