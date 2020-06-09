@@ -14,7 +14,7 @@ namespace DistanceConverter
         /// </summary>
         /// <param name="meter"></param>
         /// <returns></returns>
-        public double FromMeter(double meter)
+        public static double FromMeter(double meter)
         {
             return meter / 0.3048;
         }
@@ -24,7 +24,7 @@ namespace DistanceConverter
         /// </summary>
         /// <param name="feet"></param>
         /// <returns></returns>
-        public double ToMeter(double feet)
+        public static double ToMeter(double feet)
         {
             return feet * 0.3048;
         }
