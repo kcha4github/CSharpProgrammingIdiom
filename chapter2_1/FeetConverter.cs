@@ -9,6 +9,8 @@ namespace DistanceConverter
     /// </summary>
     public static class FeetConverter
     {
+        private const double ratio = 0.3048;
+
         /// <summary>
         /// メートルからフィートを求める
         /// </summary>
@@ -16,7 +18,7 @@ namespace DistanceConverter
         /// <returns></returns>
         public static double FromMeter(double meter)
         {
-            return meter / 0.3048;
+            return meter / ratio;
         }
 
         /// <summary>
@@ -26,7 +28,7 @@ namespace DistanceConverter
         /// <returns></returns>
         public static double ToMeter(double feet)
         {
-            return feet * 0.3048;
+            return feet * ratio;
         }
     }
 }
