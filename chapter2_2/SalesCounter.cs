@@ -15,9 +15,9 @@ namespace chapter2_2
         /// コンストラクタ
         /// </summary>
         /// <param name="sales"></param>
-        public SalesCounter(List<Sale> sales)
+        public SalesCounter(string filepath)
         {
-            _sales = sales;
+            _sales = ReadSales(filepath);
         }
 
         /// <summary>
@@ -47,7 +47,7 @@ namespace chapter2_2
         /// </summary>
         /// <param name="filepath"></param>
         /// <returns></returns>
-        public static List<Sale> ReadSales(string filepath)
+        private static List<Sale> ReadSales(string filepath)
         {
             List<Sale> sales = new List<Sale>();
             string[] lines = File.ReadAllLines(filepath);

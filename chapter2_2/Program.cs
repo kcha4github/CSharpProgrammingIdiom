@@ -8,7 +8,7 @@ namespace chapter2_2
     {
         static void Main(string[] args)
         {
-            SalesCounter sales = new SalesCounter(SalesCounter.ReadSales("sales.csv"));
+            SalesCounter sales = new SalesCounter("sales.csv");
             
             Dictionary<string, int> amountPerStore = sales.GetPerStoreSales();
             foreach(KeyValuePair<string,int> obj in amountPerStore)
