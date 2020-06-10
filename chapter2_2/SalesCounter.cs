@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.IO;
 
 namespace chapter2_2
 {
@@ -41,5 +41,31 @@ namespace chapter2_2
             }
             return dict;
         }
+
+        /// <summary>
+        /// 売上データを読み込み、Saleオブジェクトのリストを返す
+        /// </summary>
+        /// <param name="filepath"></param>
+        /// <returns></returns>
+        public static List<Sale> ReadSales(string filepath)
+        {
+            List<Sale> sales = new List<Sale>();
+            string[] lines = File.ReadAllLines(filepath);
+
+            foreach (string line in lines)
+            {
+                string[] items = line.Split(',');
+                Sale sale = new Sale
+                {
+                    ShopName = items[0],
+                    ProductCategory = items[1],
+                    Amount = int.Parse(items[2])
+                };
+                sales.Add(sale);
+            }
+
+            return sales;
+        }
+
     }
 }
